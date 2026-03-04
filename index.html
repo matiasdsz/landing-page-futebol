@@ -1,0 +1,356 @@
+---
+import MainLayout from '../layouts/main.astro';
+---
+
+<MainLayout pageClass="home">
+  <link rel="stylesheet" href="./style.css">
+  <div class="site-container">
+    <!-- Hero Section -->
+    <header class="hero-section">
+      <div class="hero-overlay"></div>
+      <img 
+        src="https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?w=1920&h=1080&fit=crop" 
+        alt="Campo de futebol" 
+        class="hero-background"
+      />
+      
+      <!-- Navigation -->
+      <nav class="hero-nav" id="navbar">
+        <div class="nav-logo">⚽ Futebol Legends</div>
+        <button class="nav-toggle" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#jogadores" class="nav-link">Jogadores</a></li>
+          <li><a href="#estatisticas" class="nav-link">Estatísticas</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero-content">
+        <h1 class="hero-title">
+          A Paixão pelo <span class="highlight">Futebol</span> que Move Multidões
+        </h1>
+        <p class="hero-subtitle">
+          Conheça as lendas vivas do esporte mais popular do mundo. Descubra histórias, 
+          estatísticas incríveis e momentos que marcaram gerações de fãs apaixonados.
+        </p>
+        
+
+        <div class="hero-buttons">
+          <button class="hero-button hero-button-primary" onclick="scrollToSection('jogadores')">
+            Explorar Jogadores
+          </button>
+          <button class="hero-button hero-button-secondary" onclick="scrollToSection('estatisticas')">
+            Ver Estatísticas
+          </button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="stat-value stat-counter" data-target="3">0</div>
+            <div class="stat-label">Lendas do Futebol</div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-value stat-counter" data-target="1650">0</div>
+            <div class="stat-label">Gols Marcados</div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-value stat-counter" data-target="13">0</div>
+            <div class="stat-label">Bolas de Ouro</div>
+          </div>
+        </div>
+      </div>
+
+     
+    </header>
+
+    <!-- Lendas do Futebol -->
+    <section id="jogadores" class="players-section">
+      <h2 class="section-title fade-in">Lendas do Futebol</h2>
+      <p class="section-subtitle fade-in">
+        Os maiores jogadores que marcaram a história do esporte mais popular do planeta
+      </p>
+      
+      <div class="players-grid">
+        <!-- Messi -->
+        <div class="player-card fade-in">
+          <img 
+            src="assets/messi2.jpg" 
+            alt="Lionel Messi" 
+            class="player-image"
+          />
+          <div class="player-info">
+            <h3 class="player-name">Lionel Messi</h3>
+            <p class="player-country">🇦🇷 Argentina</p>
+            <p class="player-achievement">8x Bola de Ouro • Campeão Mundial</p>
+            <div class="player-badges">
+              <span class="badge badge-yellow">Atacante</span>
+              <span class="badge badge-blue">Lenda</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cristiano Ronaldo -->
+        <div class="player-card fade-in">
+          <img 
+            src="assets/ronaldo.avif" 
+            alt="Cristiano Ronaldo" 
+            class="player-image"
+          />
+          <div class="player-info">
+            <h3 class="player-name">Cristiano Ronaldo</h3>
+            <p class="player-country">🇵🇹 Portugal</p>
+            <p class="player-achievement">5x Bola de Ouro • 5x Champions</p>
+            <div class="player-badges">
+              <span class="badge badge-yellow">Atacante</span>
+              <span class="badge badge-blue">Lenda</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Neymar -->
+        <div class="player-card fade-in">
+          <img 
+            src="assets/neymar.avif" 
+            alt="Neymar Jr" 
+            class="player-image"
+          />
+          <div class="player-info">
+            <h3 class="player-name">Neymar Jr</h3>
+            <p class="player-country">🇧🇷 Brasil</p>
+            <p class="player-achievement">Top 3 Mundial • Campeão olímpico</p>
+            <div class="player-badges">
+              <span class="badge badge-yellow">Atacante</span>
+              <span class="badge badge-green">Craque</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Estatísticas -->
+    <section id="estatisticas" class="stats-section">
+      <div class="stats-container">
+        <h2 class="stats-title fade-in">Números Impressionantes</h2>
+        <div class="stats-grid">
+          <div class="stat-card fade-in">
+            <div class="stat-number stat-counter" data-target="850">0</div>
+            <div class="stat-label">Gols de CR7</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-number stat-counter" data-target="800">0</div>
+            <div class="stat-label">Gols de Messi</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-number stat-counter" data-target="5">0</div>
+            <div class="stat-label">Champions League CR7</div>
+          </div>
+          <div class="stat-card fade-in">
+            <div class="stat-number stat-counter" data-target="1">0</div>
+            <div class="stat-label">Copa do Mundo Messi</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre o Futebol -->
+    <section id="sobre" class="about-section">
+      <div class="about-container">
+        <div class="about-content">
+          <div class="about-text fade-in">
+            <h2 class="about-title">A Paixão que Une o Mundo</h2>
+            <p class="about-paragraph">
+              O futebol é mais do que um esporte - é uma paixão universal que transcende 
+              fronteiras, idiomas e culturas. Milhões de pessoas ao redor do mundo se 
+              conectam através deste esporte magnífico.
+            </p>
+            <p class="about-paragraph">
+              Dos campos de terra batida às arenas modernas, o futebol continua sendo 
+              o esporte mais popular do planeta, criando heróis e momentos inesquecíveis.
+            </p>
+            <div class="about-stats">
+              <div class="about-stat-box about-stat-green">
+                <div class="about-stat-number about-counter" data-target="211">0</div>
+                <div class="about-stat-text">Países na FIFA</div>
+              </div>
+              <div class="about-stat-box about-stat-blue">
+                <div class="about-stat-number">5B+</div>
+                <div class="about-stat-text">Fãs no Mundo</div>
+              </div>
+            </div>
+          </div>
+          <div class="about-image-container fade-in">
+            <img 
+              src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=600&h=700&fit=crop" 
+              alt="Jogador comemorando" 
+              class="about-image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-logo">⚽ Futebol Legends</h3>
+            <p class="footer-description">O melhor conteúdo sobre o esporte mais popular do mundo.</p>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Links Rápidos</h4>
+            <ul class="footer-list">
+              <li><a href="#jogadores" class="footer-link">Jogadores</a></li>
+              <li><a href="#estatisticas" class="footer-link">Estatísticas</a></li>
+              <li><a href="#sobre" class="footer-link">Sobre</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Competições</h4>
+            <ul class="footer-list">
+              <li><a href="#" class="footer-link">Copa do Mundo</a></li>
+              <li><a href="#" class="footer-link">Champions League</a></li>
+              <li><a href="#" class="footer-link">Ligas Nacionais</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-heading">Redes Sociais</h4>
+            <div class="footer-social">
+              <a href="#" class="social-icon">📘</a>
+              <a href="#" class="social-icon">📸</a>
+              <a href="#" class="social-icon">🐦</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copyright">© 2024 Futebol Legends. Todos os direitos reservados. ⚽</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" title="Voltar ao topo">
+      ↑
+    </button>
+  </div>
+</MainLayout>
+
+<script>
+  // Função para scroll suave
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  // Tornar a função global
+  window.scrollToSection = scrollToSection;
+
+  // Menu responsivo
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+
+  navToggle?.addEventListener('click', () => {
+    navMenu?.classList.toggle('active');
+    navToggle?.classList.toggle('active');
+  });
+
+  // Fechar menu ao clicar em um link
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu?.classList.remove('active');
+      navToggle?.classList.remove('active');
+    });
+  });
+
+  // Navbar com fundo ao fazer scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      navbar?.classList.add('scrolled');
+    } else {
+      navbar?.classList.remove('scrolled');
+    }
+  });
+
+  // Animação de contador
+  function animateCounter(element) {
+    const target = parseInt(element.getAttribute('data-target') || '0');
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+
+    const updateCounter = () => {
+      current += increment;
+      if (current < target) {
+        element.textContent = Math.floor(current).toString();
+        requestAnimationFrame(updateCounter);
+      } else {
+        element.textContent = target.toString();
+      }
+    };
+
+    updateCounter();
+  }
+
+  // Intersection Observer para animações
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        
+        // Animar contadores quando visíveis
+        if (entry.target.classList.contains('counter') || 
+            entry.target.classList.contains('stat-counter') ||
+            entry.target.classList.contains('about-counter')) {
+          animateCounter(entry.target);
+        }
+        
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observar todos os elementos com fade-in
+  const fadeElements = document.querySelectorAll('.fade-in');
+  fadeElements.forEach(el => observer.observe(el));
+
+  // Observar contadores
+  const counters = document.querySelectorAll('.counter, .stat-counter, .about-counter');
+  counters.forEach(counter => observer.observe(counter));
+
+  // Botão voltar ao topo
+  const backToTop = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTop?.classList.add('visible');
+    } else {
+      backToTop?.classList.remove('visible');
+    }
+  });
+
+  backToTop?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Parallax suave na hero
+  window.addEventListener('scroll', () => {
+    const heroBackground = document.querySelector('.hero-background');
+    if (heroBackground) {
+      const scrolled = window.scrollY;
+      heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+    }
+  });
+</script>
